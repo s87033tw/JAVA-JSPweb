@@ -120,7 +120,7 @@
                resourceName="UserDatabase"/>
       </Realm>
 
-      <Host name="localhost"  appBase="C:\Users\wang\Desktop\作業\Git\JAVA-JSPweb\webapps"
+      <Host name="localhost"  appBase="D:\AM021331\JAVA-JSPweb\webapps"
             unpackWARs="true" autoDeploy="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
