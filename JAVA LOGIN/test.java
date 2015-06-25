@@ -69,7 +69,8 @@ class test{
 		
 		
 		
-		
+		save sa = new save();
+		sa.save(classstate,student);
 		}
 
 
