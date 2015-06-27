@@ -1,0 +1,8 @@
+重要!!
+先把server.xml裡的 appBase="webapps"找出來
+然後把webapps改成你GIT clone下來webapps的路徑
+
+例如:"webapps" 改成  "C:\Users\wang\Desktop\作業\Git\JAVA-JSPweb\webapps"
+
+最把server.xml丟到以下路徑覆蓋檔案
+C:\Program Files\Apache Software Foundation\Tomcat 8.0\conf
