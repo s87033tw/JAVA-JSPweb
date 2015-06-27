@@ -2,7 +2,7 @@
 <HTML>
 <TITLE>座位大小</TITLE>
 <body>
- <form method="post" action="NewFile.jsp">
+ <form method="post" action="SeatEnter1.jsp">
   <p>
   	請輸入座位 長x寬:
     <input type="text" name="count" size="4" maxlength="2"/>
