@@ -1,7 +1,8 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <HTML>
 <TITLE>座位大小</TITLE>
 <body>
+<body bgcolor="#D4FFD4">
  <form method="post" action="SeatEnter1.jsp">
   <p>
   	請輸入座位 長x寬:

@@ -1,24 +1,35 @@
-﻿<%@ page contentType="text/html; charset=utf-8" language="java"  errorPage="" %>
+﻿<%@ page contentType="text/html; charset=utf-8" language="java"  errorPage="error.jsp" %>
 
 <HTML>
 <head>
 <TITLE>座位表</TITLE>
 <head>
 <body>
+<body bgcolor="#D4FFD4">
 <% 
 	//try{
 
-	int count = Integer.parseInt(request.getParameter("count"));
-	int count2 = Integer.parseInt(request.getParameter("count2"));
-	int i = Integer.parseInt(request.getParameter("i"));
-	int j = Integer.parseInt(request.getParameter("j"));
+	String Tcount =(String)session.getAttribute("Tcount");
+	int count=Integer.parseInt(Tcount);
+	String Tcount2 =(String)session.getAttribute("Tcount2");
+	int count2=Integer.parseInt(Tcount2);
 
-	for( i=0;i<count;i++){
-		for( j=0;j<count2;j++){
-			out.println(request.getParameter("classstate[i][j]")+" "+request.getParameter("student[i][j]")+"\t");
-			}	
-		out.println();
-	}
+		for(int i=0;i<count;i++){
+			%><table style="border-top:3px #FFD382 solid;border-bottom:3px #82FFFF solid;" cellpadding="10" border='0'><tr><%
+			for(int j=0;j<count2;j++){
+%>
+　			<td><%=request.getParameter("classstate["+String.valueOf(i)+"]["+String.valueOf(j)+"]")%></td>
+			<td><%=request.getParameter("student["+String.valueOf(i)+"]["+String.valueOf(j)+"]")%></td>
+			<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+<%
+			}
+%>
+			</tr>
+			</table>
+			<p>
+<%
+		}
+
 	//}catch(Exception e){}
 %>
 </body>
