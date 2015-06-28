@@ -7,8 +7,8 @@ class user{
 
 
 	public static void main(String[]args)throws Exception{
-		ArrayList<String>pw=new ArrayList<String>();
-		Set <String>account=new HashSet<String>();
+		ArrayList<String>pw=new ArrayList<String>();//密碼的list
+		Set <String>account=new HashSet<String>();//帳號
 		FileWriter fw=new FileWriter("username.txt",true);
 		FileReader fr=new FileReader("username.txt");
 		FileWriter fw1=new FileWriter("password.txt",true);
@@ -26,34 +26,34 @@ class user{
 			if(a==1){
 			username=input.next();
 			password=input.next();
-			while((accountdetail=br.readLine())!=null){
+			while((accountdetail=br.readLine())!=null){//從這讀資料
 			
 				account.add(accountdetail);
 		
-			}
-			if(account.add(username)){
+			}//到這
+			if(account.add(username)){//帳號重複了嗎?
 						System.out.println("create success");
-						fw.write(username+" \r\n");
+						fw.write(username+" \r\n");//寫帳號
 						fw.flush();	
-				if(pw.add(password)){
+				if(pw.add(password)){//存入密碼
 							System.out.println("create success");
-							fw1.write(password+" \r\n");
-							fw1.flush();	
+							fw1.write(password+" \r\n");//寫密碼
+							fw1.flush();//	
 	
-						}
+						}//if(password)
 	
 					}
 			
 					else
-						System.out.println("woring");
-			}
+						System.out.println("woring");//else
+			}//if(1)
 			if(a==2){
-				quit=false;
-			}
+				quit=false;//exit
+			}//if(2)
 			
 			}
 		
-			fw.close();
+			fw.close();//存檔
 	}
 
 }
