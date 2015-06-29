@@ -8,7 +8,7 @@
 		String test1 = request.getParameter("username");
 		String test2 = request.getParameter("password");
 		if(test1.equals("admin")&&test2.equals("1"))
-			response.sendRedirect("http://localhost:8080/Java_JSP/load.jsp");
+			response.sendRedirect("http://localhost:8080/JSP/load.jsp");
 		else
 			request.getRequestDispatcher("login.html").forward(request, response);
 	%>
