@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 
 <HTML>
 <head>
@@ -15,7 +15,7 @@
 
 	for( i=0;i<count;i++){
 		for( j=0;j<count2;j++){
-			out.println(request.getParameter.Values("classstate[i][j]")+" "+request.getParameter.Values("student[count3]")+"\t");
+			out.println(request.getParameter.Values("classstate[i][j]")+" "+request.getParameter.Values("student[i][j]")+"\t");
 			}	
 		out.println();
 	}

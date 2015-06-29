@@ -1,8 +1,11 @@
+<%@page contentType = "text/html"%>
+<%@page pageEncoding = "UTF-8"%>
+
 <html>
     <head>
         <title>Hello Servlet</title>
     </head>
     <body>
-        <h1>JspTest</h1>
+	<%@include file="/login/login.html"%>
     </body>
 </html>
