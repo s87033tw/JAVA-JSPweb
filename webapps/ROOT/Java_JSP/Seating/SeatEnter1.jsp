@@ -20,7 +20,6 @@
 	int i=0;
 	int j=0;
 	int alpha=65;
-	int alpha2=49;
 	String temp="",temp2="";
 
 	String classstate[][]=new String[count][count2];	
@@ -30,11 +29,9 @@
 
 		for(j=0;j<count2;j++){
 			temp=(char)alpha+"";
-			temp2=(char)alpha2+"";				
-			classstate[i][j]=temp+temp2;
-			alpha2++;	
+			temp2=String.valueOf(j+1);				
+			classstate[i][j]=temp+temp2;	
 		}
-		alpha2=49;
 		alpha++;		
 	}
 %>
@@ -67,18 +64,6 @@
 		<p>
 <%	
 	}
-
-	/*for(i=0;i<count;i++){
-		for(j=0;j<count2;j++){
-			student[i][j]="student[i][j]";
-			if((student[i][j].equals("n"))&&(j+1)<count2){
-				classstate[i][j+1]=classstate[i][j];
-				classstate[i][j]=" ";
-				student[i][j]=" ";
-			}
-		}
-	}*/
-
 %>
 	<input type="submit" name="enter"  value="儲存" />
 	<input type="reset"  name="reset" value="清除">

@@ -1,10 +1,11 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <HTML>
 <TITLE>Save</TITLE>
 <body>
 <%
 	String a[][];
 	String b[][];
+%>
 			
 	String fw = application.getRealPath("save.txt");
 	java.io.BufferedInputStream bw = new java.io.BufferedInputStream(new java.io.FileInputStream(fw));

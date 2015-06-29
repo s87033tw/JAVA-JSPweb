@@ -1,19 +1,18 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.util.*,java.io.*,java.sql.*,java.util.ArrayList" errorPage="" %>
+﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.util.*,java.io.*" errorPage="/Seating/error.jsp" %>
 <HTML>
 <TITLE>Save</TITLE>
 <body>
+<body bgcolor="#D4FFD4">
+<center>
 <%
-//class load{
-	//public static void main(String[]args)throws Exception{
 
-		//List myList = new ArrayList();
 		ArrayList<String>status=new ArrayList<>();//學號	
 		ArrayList<String>computernum=new ArrayList<>();//電腦位子
 		Set<String> alpha = new HashSet<String>();//判斷有幾個不重複英文字母
 		
-		File f1 = new File("save.txt");
-		String fr = application.getRealPath(f1);
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fr)));
+		File f1 = new File("aa.txt");
+		FileReader fr =new FileReader(f1);
+		BufferedReader br = new BufferedReader(fr);
 		String statusmessage="";
 		int max=0;
 		int statuscount=0,alphacount=0;
@@ -43,26 +42,43 @@
 			status.add(message);
 			message="";
 		}
-		for(int i=0;i<status.size();i++){
+		/*for(int i=0;i<status.size();i++){
 			
-			System.out.println(computernum.get(i)+"\t"+status.get(i));//印
+			out.print(computernum.get(i)+"&nbsp;&nbsp;&nbsp;"+status.get(i));//印
 
-		}
-		String [][]stustatus=new String[alpha.size()][max];
-		String [][]stuid=new String[alpha.size()][max];
+		}*/
+
+
+		String [][]classstate=new String[alpha.size()][max];
+		String [][]student=new String[alpha.size()][max];
 		int k=0;
 		for(int i=0;i<alpha.size();i++){//把位置+學號存成2維陣列
 
 				for(int j=0;j<max;j++){
-					stustatus[i][j]=computernum.get(k);
-					stuid[i][j]=status.get(k);
+					classstate[i][j]=computernum.get(k);
+					student[i][j]=status.get(k);
 					k++;
 				}
 		}
 		computernum.clear();//清空
 		status.clear();	//清空
-	//}
-//}
+
+		for(int i=0;i<alpha.size();i++){
+			%><table style="border-top:3px #FFD382 solid;border-bottom:3px #82FFFF solid;" cellpadding="10" border='0' bgcolor="#BBFFEE"><tr><%
+			for(int j=0;j<max;j++){
 %>
+　			<td><%=classstate[i][j]%></td>
+			<td><%=student[i][j]%></td>
+			<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+<%
+			}
+%>
+			</tr>
+			</table>
+			<p>
+<%
+		}
+%>
+</center>
 </body>
 </html>
