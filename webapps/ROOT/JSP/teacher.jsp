@@ -53,6 +53,11 @@
 	}
 %>
 </tr></table>
+
+<form action="http://localhost:8080/JSP/New.jsp" method="post">
+			<button type="submit" name="enter1" />返回</button/>
+</form>
+
 </center>
 </body>
 </html>
