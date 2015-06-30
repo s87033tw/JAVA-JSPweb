@@ -64,7 +64,7 @@
 		}
 	}
 %>
-<input type="text" name="class" >
+班級編號:<input type="text" name=classData size="4"><p>
 <input type="submit" value="儲存">
 </form>
 

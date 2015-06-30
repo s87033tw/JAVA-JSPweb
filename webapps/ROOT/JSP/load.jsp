@@ -1,16 +1,18 @@
-﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.util.*,java.io.*" errorPage="/Seating/error.jsp" %>
+﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.util.*,java.io.*" errorPage="" %>
 <HTML>
 <TITLE>Save</TITLE>
 <body>
 <body bgcolor="#D4FFD4">
 <center>
 <%
-
+		String username=request.getParameter("username");
 		ArrayList<String>status=new ArrayList<>();//學號	
 		ArrayList<String>computernum=new ArrayList<>();//電腦位子
 		Set<String> alpha = new HashSet<String>();//判斷有幾個不重複英文字母
+
+		String class2=(String)session.getAttribute("class");
 		
-		File f1 = new File("aa.txt");
+		File f1 = new File("C:/Program Files/Apache Software Foundation/Tomcat 8.0/temp/classList/"+class2+".txt");
 		FileReader fr =new FileReader(f1);
 		BufferedReader br = new BufferedReader(fr);
 		String statusmessage="";
@@ -79,6 +81,11 @@
 <%
 		}
 %>
+
+<form action="http://localhost:8080/JSP/New.jsp" method="post">
+			<button type="submit" name="enter1" formaction="http://localhost:8080/JSP/sign.jsp"/>簽到</button>
+			<button type="submit" name="enter1" />返回</button/>
+</form>
 </center>
 </body>
 </html>

@@ -65,7 +65,7 @@
 <%	
 	}
 %>
-	<input type="submit" name="enter"  value="儲存" />
+	<input type="submit" name="enter"  value="確定" />
 	<input type="reset"  name="reset" value="清除">
 <hr>.
 </form>

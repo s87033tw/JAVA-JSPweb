@@ -6,6 +6,6 @@
         <title>Hello Servlet</title>
     </head>
     <body>
-	<%@include file="/login/login.html"%>
+	<%@include file="login.html"%>
     </body>
 </html>
